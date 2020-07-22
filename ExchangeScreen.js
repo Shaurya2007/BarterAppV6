@@ -13,6 +13,11 @@ export default class ExchangeScreen extends Component{
             itemDescription:''
         }
     }
+    
+    createUniqueId(){
+    return Math.random().toString(36).substring(7)
+}
+    
     render(){
         return(
              <View>
