@@ -6,6 +6,7 @@ import firebase from 'firebase'
 export default class CustomSideBarMenu extends Component{
     render(){
         return(
+            <View>
              <View style={styles.container}>
              <View style = {styles.drawerItemsContainer}>
              <DrawerItems {...this.props}/>
@@ -21,6 +22,7 @@ export default class CustomSideBarMenu extends Component{
              </View>
              </View>
              </View>
+           </View>
         )
     }
 }
