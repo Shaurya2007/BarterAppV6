@@ -6,6 +6,8 @@ import HomeScreen from '../screens/HomeScreen'
 export default class MyBarters extends Component{
     constructor(){
         super()
+        this.state={
+            allBarters:''
     }
 
     keyExtractor = (item,index) => index.toString()
@@ -18,6 +20,19 @@ getAllBarters(){
             allBarters:allBarters
         })
     })
+}
+        
+        renderItem=({item,i})=>{
+    return(
+       <ListItem
+       key={i}
+       leftElement={<Icon name="item" type="font-awesome" color='#696969'/>}
+       title={item.item_name}
+       titleStyle={{color:black ,fontWeight:'bold'}}
+       subtitle={"Requested By:"+item.request_by+"\nStatus:"+item.request_status}
+       bottomDivider
+       />
+    )
 }
 
     render(){
